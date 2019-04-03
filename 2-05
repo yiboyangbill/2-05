@@ -1,0 +1,28 @@
+display.setDefault("background", 0, 0, 1 )
+local image = display.newImageRect( "enterButton.png", 100, 40 )
+
+image.x = display.contentCenterX
+
+image.y = display.contentCenterY
+
+image.id = "enterButton"
+
+
+display.newText ("yibo yang", display.contentCenterX, display.contentCenterY -200, native.systemFont, 50 )
+
+local answerTextField = native.newTextField( display.contentCenterX, display.contentCenterY + -120, 250, 50 )
+
+answerTextField.id = "answerTextField"
+ 
+
+local function enterButtonTouch( event )
+
+    print( answerTextField.text )
+
+
+
+    return true
+
+end
+
+image:addEventListener( "touch", enterButtonTouch )
